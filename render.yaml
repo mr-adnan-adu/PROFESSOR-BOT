@@ -1,34 +1,67 @@
+# render.yaml - Add this file to your repository root
 services:
   - type: web
     name: professor-bot
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    startCommand: python bot.py
     plan: free
-    healthCheckPath: /health
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
       - key: BOT_TOKEN
-        sync: false  # Set this in Render dashboard as secret
-      - key: WEBHOOK_URL
-        sync: false  # Set this in Render dashboard
-      - key: DATABASE_URL
-        sync: false  # If using database
-      - key: OPENAI_API_KEY
-        sync: false  # If using OpenAI
-      - key: ENVIRONMENT
-        value: production
-      - key: DEBUG
-        value: false
-    
-  # Optional: If you need a database
-  - type: pserv  # PostgreSQL service
-    name: professor-bot-db
-    plan: free
-    env: postgresql
-    
-  # Optional: If you need Redis for caching
-  - type: redis
-    name: professor-bot-redis
-    plan: free
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: CHANNELS
+        sync: false
+      - key: ADMINS
+        sync: false
+      - key: PICS
+        sync: false
+      - key: LOG_CHANNEL
+        sync: false
+      - key: AUTH_CHANNEL
+        sync: false
+      - key: MAX_RIST_BTNS
+        value: "10"
+      - key: CUSTOM_FILE_CAPTION
+        sync: false
+      - key: DATABASE_URI
+        sync: false
+      - key: DATABASE_NAME
+        value: "MknBotz"
+      - key: COLLECTION_NAME
+        value: "Telegram_files"
+      - key: SUPPORT_CHAT
+        sync: false
+      - key: IMDB
+        value: "True"
+      - key: IMDB_TEMPLATE
+        sync: false
+      - key: IMDB_DELET_TIME
+        value: "900"
+      - key: SINGLE_BUTTON
+        value: "True"
+      - key: START_MESSAGE
+        sync: false
+      - key: FORCE_SUB_TEXT
+        sync: false
+      - key: AUTH_GROUPS
+        sync: false
+      - key: WELCOM_PIC
+        sync: false
+      - key: WELCOM_TEXT
+        sync: false
+      - key: BUTTON_LOCK_TEXT
+        sync: false
+      - key: PMFILTER
+        value: "True"
+      - key: G_FILTER
+        value: "True"
+      - key: BUTTON_LOCK
+        value: "True"
+      - key: RemoveBG_API
+        sync: false
+      - key: P_TTI_SHOW_OFF
+        value: "True"
