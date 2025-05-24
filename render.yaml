@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: professor-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: BOT_TOKEN
+        sync: false  # Set this in Render dashboard as secret
+      - key: WEBHOOK_URL
+        sync: false  # Set this in Render dashboard
+      - key: DATABASE_URL
+        sync: false  # If using database
+      - key: OPENAI_API_KEY
+        sync: false  # If using OpenAI
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: false
+    
+  # Optional: If you need a database
+  - type: pserv  # PostgreSQL service
+    name: professor-bot-db
+    plan: free
+    env: postgresql
+    
+  # Optional: If you need Redis for caching
+  - type: redis
+    name: professor-bot-redis
+    plan: free
