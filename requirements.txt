@@ -1,3 +1,86 @@
-git+https://github.com/MKN-BOTZ/pyrogram         
-tgcrypto
+# Core Telegram Bot Libraries
+pyrogram==2.0.106
+tgcrypto==1.2.5
+pyromod==3.0.2
 
+# Database
+pymongo==4.6.1
+motor==3.3.2
+dnspython==2.4.2
+
+# Web Framework (for webhooks)
+aiohttp==3.9.1
+aiohttp-cors==0.7.0
+
+# Image Processing & Media
+Pillow==10.1.0
+opencv-python-headless==4.8.1.78
+requests==2.31.0
+
+# IMDB Integration
+IMDbPY==2022.7.9
+beautifulsoup4==4.12.2
+lxml==4.9.4
+
+# Background Removal API
+rembg==2.0.50
+
+# Async Support
+asyncio==3.4.3
+aiofiles==23.2.1
+
+# Date/Time Handling
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Environment Variables
+python-decouple==3.8
+python-dotenv==1.0.0
+
+# Utilities
+humanfriendly==10.0
+psutil==5.9.6
+gitpython==3.1.40
+
+# Text Processing
+regex==2023.10.3
+fuzzywuzzy==0.18.0
+python-levenshtein==0.23.0
+
+# File Handling
+hurry.filesize==0.9
+filetype==1.2.0
+
+# Logging
+colorlog==6.8.0
+
+# YouTube & Media Download
+yt-dlp==2023.11.16
+youtube-search-python==1.6.6
+
+# Scheduling
+APScheduler==3.10.4
+
+# HTTP Requests
+httpx==0.25.2
+cloudscraper==1.2.71
+
+# JSON Processing
+ujson==5.8.0
+
+# Progress Bars
+tqdm==4.66.1
+
+# QR Code Generation
+qrcode[pil]==7.4.2
+
+# Translation
+googletrans==4.0.0rc1
+
+# Weather API
+pyowm==3.3.0
+
+# Miscellaneous
+validators==0.22.0
+marshmallow==3.20.1
+nest-asyncio==1.5.8
